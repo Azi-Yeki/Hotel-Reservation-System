@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <style>
+            body {
+                background-color: white
+            }
+            .navbar {
+                background-color: #904220;
+                padding: 10px 0;
+                border-radius: 1px;
+                width: 100%;
+                height: 40px    
+            }
+
+            .navbar a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 15px;
+                font-size: 18px;
+            }
+
+            .navbar a:hover {
+                background-color: #555;
+            }
+        </style>
+    </head>
+    <body style="background-color: white;">
+        <video id="video-background" autoplay muted loop>
+            <source src="D:\Java 007\Project documentation\saxon-short-vid.m4v" type="video/mp4">
+            <!-- Add other video sources for different formats if needed -->
+        </video>
+        <div class="navbar" style="a">
+            <a href="homepage.html">HOME</a>
+            <a href="viewRooms.jsp">VIEW ROOMS</a>
+            <a href="chooseDates.html">ADD BOOKING</a>
+            <a href="/Project2/ReservationController?action=past">VIEW BOOKING HISTORY</a>
+            <a href="/Project2/ReservationController?action=upcoming">VIEW UPCOMING BOOKINGS</a>
+        </div>
+        <div class="booking-section" style="background-color: rgba(0, 0, 0, 0.2)">
+            <h2>Book Now</h2>
+            <form id="booking-form" method="post" action="ReservationController">
+                <label for="check-in-date">Check-in Date:</label><br>
+                <input type="date" id="check-in-date" name="check-in-date" required><br>
+
+                <label for="check-out-date">Check-out Date:</label><br>
+                <input type="date" id="check-out-date" name="check-out-date" required><br>
+                
+                <select name="num-of-guests" id="num-of-guests" class="valid" aria-invalid="false">
+                    <option selected="">Number of Guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <button name="submit" style="background-color: white; color: black" type="submit" value="searchAvailability">Search Availability</button>
+            </form>
+        </div>
+    </body>
+</html> 
