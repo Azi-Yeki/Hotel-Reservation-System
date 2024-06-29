@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Home hhhhh.</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f2f2f2;
+                margin: 0;
+                padding: 0;
+            }
+            .container-full-bg {
+                background-image: url('https://i.pinimg.com/474x/f7/c4/b6/f7c4b6d90ca5157b23ba723b24f8ef36.jpg');
+                background-size: cover; /* Cover entire container */
+                background-position: center; /* Center the background image */
+                height: 100vh; /* Full viewport height */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .navbar {
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 10px 0;
+                border-radius: 1px;
+                width: 100%
+            }
+
+            .navbar a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 15px;
+                font-size: 18px;
+            }
+
+            .navbar a:hover {
+                background-color: #555;
+            }
+            .booking-form-container {
+                background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+                padding: 20px;
+                border-radius: 8px;
+                width: 90%; /* Increased width for better spacing */
+                margin: auto;
+                margin-top: 350px; /* Adjust as needed */
+            }
+
+            .booking-form {
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            .booking-form .form-group {
+                margin-bottom: 10px;
+            }
+
+            .booking-form label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .booking-form input[type="date"],
+            .booking-form select,
+            .booking-form button {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-size: 16px;
+                background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency */
+                color: white;
+            }
+
+            .booking-form button {
+                background-color: white;
+                border: none;
+                padding: 15px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 18px;
+                cursor: pointer;
+                border-radius: 1px;
+                transition: background-color 0.3s ease;
+            }
+
+            .booking-form button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-full-bg"> 
+            <div class="navbar" style="a">
+                <a href="homepage.html">HOME</a>
+                <a href="viewRooms.jsp">VIEW ROOMS</a>
+                <a href="chooseDates.html">ADD BOOKING</a>
+                <a href="/Project2/ReservationController?action=past">VIEW BOOKING HISTORY</a>
+                <a href="/Project2/ReservationController?action=upcoming">VIEW UPCOMING BOOKINGS</a>
+            </div>
+            <div class="booking-form-container">
+                <form id="booking-form" method="post" action="/Project2/ReservationController" class="row g-3">
+                    <div class="col-md-3" style="color: white">
+                        <label for="check-in-date" class="form-label">Check-in Date:</label>
+                        <input type="date" id="check-in-date" name="check-in-date" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3" style="color: white">
+                        <label for="check-out-date" class="form-label">Check-out Date:</label>
+                        <input type="date" id="check-out-date" name="check-out-date" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3" style="color: white">
+                        <label for="num-of-guests" class="form-label">Number of Guests:</label>
+                        <select name="num-of-guests" id="num-of-guests" class="form-select" required>
+                            <option selected disabled>Number of Guests</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+
+                    <div class="col-3" style="padding-top: 20px;">
+                        <button name="submit" style="background-color: white; color: black" type="submit" value="searchAvailability" class="btn btn-primary">Search Availability</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+        <div class="info">
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="post" action="ReservationController">
+                        <button type="submit" name="submit" value="checkAvailability">CHECK AVAILABILITY</button>
+                        
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://i.pinimg.com/236x/0a/3f/5f/0a3f5fc7359d058a5b6bd953ded6c529.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="images">
+            <div class="col-md-4">
+                <img src="https://i.pinimg.com/474x/84/07/3a/84073a4507bf9dd1d7428858f2b39b60.jpg">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.pinimg.com/474x/57/53/d7/5753d733d4606e3cf7fb2658c77eca66.jpg">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.pinimg.com/474x/f7/c4/b6/f7c4b6d90ca5157b23ba723b24f8ef36.jpg">
+            </div>
+        </div>
+        <script>
+            // Get today's date in the format yyyy-mm-dd
+            function formatDate(date) {
+                const d = new Date(date),
+                      year = d.getFullYear(),
+                      month = ('0' + (d.getMonth() + 1)).slice(-2),
+                      day = ('0' + d.getDate()).slice(-2);
+                return `${year}-${month}-${day}`;
+            }
+
+            // Set minimum date for check-in date input
+            document.getElementById('check-in-date').min = formatDate(new Date());
+
+            // Set minimum date for check-out date input (based on check-in date)
+            document.getElementById('check-in-date').addEventListener('change', function() {
+                document.getElementById('check-out-date').min = this.value;
+            });
+        </script>
+        <footer>
+            © 2024 Luxury Leisure Hotel.
+        </footer>
+    </body>
+</html>

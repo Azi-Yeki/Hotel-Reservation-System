@@ -1,0 +1,292 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 Jun 2024, 8:58:37 AM
+    Author     : Admin
+*/
+
+ body {
+    font-family: Arial, sans-serif;
+}
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    overflow: hidden;
+}
+.navbar {
+    background-color: transparent;
+    overflow: hidden;
+    
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: black;
+}
+.registration-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-section h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.registration-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.registration-section input[type="text"],
+.registration-section input[type="email"],
+.registration-section input[type="tel"],
+.registration-section input[type="password"],
+.registration-section button {
+    width: calc(100% - 22px); /* Adjusted width to account for padding and border */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff; /* Background color for consistency */
+    color: #333; /* Text color */
+}
+
+.registration-section button {
+    width: 100%; /* Set button width to 100% */
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registration-section button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.booking-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.booking-section h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #fff;
+}
+.booking-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #fff;
+}
+.booking-section input[type="date"],
+.booking-section input[type="number"],
+.booking-section input[type="text"],
+.booking-section button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.booking-section button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.booking-section button:hover {
+    background-color: #0056b3;
+}
+.booking-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff; /* Background color for consistency */
+    color: #333; /* Text color */
+}
+
+.container {
+    background-image: url('https://i.pinimg.com/564x/d7/f6/ab/d7f6abfde470eecc34259a00cb32ae00.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.images img {
+    width: 100%; /* Make images responsive to container width */
+    height: 400px; /* Maintain aspect ratio */
+    border-radius: 2px; /* Add rounded corners */
+    margin-bottom: 20px; /* Add some space between images */
+}
+
+/* Optional: Add hover effect */
+.images img:hover {
+    opacity: 0.8;
+}
+
+.info {
+    height: 400px;
+    align-content: center;
+    padding-left: 250px;
+}
+.info button { 
+    width: 200px;
+    height: 50px;
+    color: rgb(204,85,0);
+    border-color: rgb(204,85,0);
+    background-color: transparent;
+    margin-top: 130px; 
+}
+
+.info img {
+    width: 65%; /* Make images responsive to container width */
+    height: 340px; /* Maintain aspect ratio */
+    border-radius: 2px; /* Add rounded corners */
+    margin-left: 110px
+}
+
+.room-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.room {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.room-image img {
+    width: 50%;
+    height: 200px;
+    display: block;
+}
+
+.room-details {
+    padding: 20px;
+}
+
+.room-details h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.room-details p {
+    margin-bottom: 10px;
+}
+
+.room-details button {
+    background-color: #007bff;
+    color: rgb(204,85,0);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.room-details button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+#booking-form {
+    width: 100%; /* Optional: Set the width of the form */
+}
+
+.form-row {
+    margin-bottom: 10px; /* Optional: Adjust spacing between rows */
+}
+
+.form-row label,
+.form-row input,
+.form-row select,
+.form-row button {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px; /* Optional: Adjust spacing between elements */
+}
+
+.form-row label {
+    min-width: 150px; /* Optional: Ensure labels have consistent width */
+}
+
+
+.button { 
+    width: 200px;
+    height: 50px;
+    color: rgb(204,85,0);
+    border-color: rgb(204,85,0);
+    background-color: transparent;
+    margin-top: 130px; 
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-lg {
+    padding: 15px 25px;
+    font-size: 18px;
+}
